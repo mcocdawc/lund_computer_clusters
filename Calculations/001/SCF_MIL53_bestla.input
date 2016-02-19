@@ -1,0 +1,28 @@
+*SCF energy for MIL53
+*File: SCF.energy.CH4
+*60.868692479046352
+*
+
+&GATEWAY
+ Title = MIL53
+ coord = MIL53.xyz
+ basis = ANO-XS-VDZ, Cr.ANO-RCC-VDZP
+ *group = C1
+ RICD
+
+&SEWARD
+
+*>> COPY $CurrDir/startorb $WorkDir/$Project.ScfOrb
+
+&SCF
+ charge = 4
+*Occ = 40 30 25 34
+
+*>> COPY $WorkDir/$Project.ScfOrb $CurrDir/startorb
+
+&GRID_IT
+Sparse
+
+ 
+ 
+ >> COPY $WorkDir/$Project.grid $CurrDir/$Project.grid
